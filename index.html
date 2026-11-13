@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="lv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="SIA SATIS – dzelzsbetona izstrādājumu ražotājs Vangažos. Kvalitatīvas konstrukcijas un individuāli risinājumi būvniecības projektiem."
+    />
+    <title>SIA SATIS | Dzelzsbetona izstrādājumi un konstrukcijas</title>
+    <link
+      rel="shortcut icon"
+      href="assets/img/logo/fav-logo1.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/plugins/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/plugins/mobile.css" />
+    <link rel="stylesheet" href="assets/css/plugins/owlcarousel.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/sidebar.css" />
+    <link rel="stylesheet" href="assets/css/plugins/slick-slider.css" />
+    <link rel="stylesheet" href="assets/css/plugins/nice-select.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      :root {
+        --satis-yellow: #fcf000;
+        --satis-dark: #1f2933;
+        --satis-text: #53616a;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      #Kontakti {
+        scroll-margin-top: 110px;
+      }
+      .satis-hero {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: min(780px, 90svh);
+        padding: 150px 20px 110px;
+        margin-top: 100px;
+        background: url("assets/img/bg/header-bg1.jpg") center / cover no-repeat;
+        color: #fff;
+        text-align: center;
+        isolation: isolate;
+      }
+      .satis-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(15, 23, 18, 0.57);
+        z-index: -1;
+      }
+      .satis-hero h1 {
+        font-size: clamp(36px, 5vw, 64px);
+        line-height: 1.13;
+        font-weight: 800;
+        color: #fff;
+        margin: 0;
+      }
+      .satis-hero p {
+        max-width: 670px;
+        margin: 26px auto 32px;
+        font-size: 18px;
+        line-height: 1.7;
+        color: #fff;
+      }
+      .satis-hero .satis-button {
+        display: inline-block;
+        padding: 14px 30px;
+        background: var(--satis-yellow);
+        color: var(--satis-dark);
+        border-radius: 28px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: background 0.2s ease;
+      }
+      .satis-hero .satis-button:hover,
+      .satis-hero .satis-button:focus {
+        background: var(--satis-dark);
+        color: var(--satis-yellow);
+      }
+
+      .satis-about {
+        background: #f5f6f7;
+        padding: 95px 20px;
+      }
+      .satis-about-container {
+        max-width: 1180px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+        align-items: center;
+        gap: clamp(32px, 6vw, 80px);
+      }
+      .satis-about__intro {
+        margin-bottom: 26px;
+      }
+      .satis-about__intro h2 {
+        margin: 0 0 14px;
+        color: var(--satis-dark);
+        font-size: clamp(28px, 3.2vw, 40px);
+        line-height: 1.2;
+      }
+      .satis-about__intro p {
+        margin: 0;
+        color: var(--satis-text);
+        font-size: 17px;
+        line-height: 1.7;
+      }
+      .satis-benefits {
+        display: grid;
+      }
+      .satis-benefit {
+        display: grid;
+        grid-template-columns: 42px 1fr;
+        gap: 16px;
+        padding: 20px 0;
+        border-top: 1px solid #dfe3e5;
+      }
+      .satis-benefit__number {
+        display: grid;
+        width: 36px;
+        height: 36px;
+        place-items: center;
+        border-radius: 50%;
+        background: var(--satis-yellow);
+        color: var(--satis-dark);
+        font-size: 13px;
+        font-weight: 800;
+      }
+      .satis-benefit h3 {
+        margin: 2px 0 8px;
+        color: var(--satis-dark);
+        font-size: 20px;
+        line-height: 1.3;
+      }
+      .satis-benefit p {
+        margin: 0;
+        color: var(--satis-text);
+        font-size: 15px;
+        line-height: 1.65;
+      }
+      .satis-about__photo {
+        height: 460px;
+        overflow: hidden;
+        border-radius: 18px;
+      }
+      .satis-about__photo img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .satis-contact-note {
+        line-height: 1.7;
+      }
+      .satis-contact-note a {
+        overflow-wrap: anywhere;
+      }
+      .satis-contact-form input,
+      .satis-contact-form textarea {
+        width: 100%;
+      }
+      .satis-contact-form textarea {
+        min-height: 145px;
+      }
+      .satis-contact-form .input-area {
+        margin-bottom: 20px;
+      }
+      .satis-contact-form .header-btn1 {
+        cursor: pointer;
+      }
+      @media (max-width: 991px) {
+        .satis-hero {
+          margin-top: 75px;
+          min-height: 650px;
+        }
+      }
+      @media (max-width: 767px) {
+        .satis-hero {
+          margin-top: 70px;
+          min-height: 590px;
+          padding: 120px 18px 85px;
+        }
+        .satis-hero p {
+          font-size: 16px;
+        }
+        .satis-about {
+          padding: 54px 18px;
+        }
+        .satis-about-container {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+        .satis-about__photo {
+          height: 320px;
+        }
+        .satis-benefit {
+          grid-template-columns: 38px 1fr;
+          gap: 12px;
+          padding: 18px 0;
+        }
+        .satis-benefit h3 {
+          font-size: 18px;
+        }
+      }
+    </style>
+    <script src="assets/js/plugins/jquery-3-6-0.min.js"></script>
+  </head>
+  <body class="homepage1-body">
+    
+    <div class="paginacontainer">
+      <div class="progress-wrap">
+        <svg
+          class="progress-circle svg-content"
+          width="100%"
+          height="100%"
+          viewBox="-1 -1 102 102"
+          aria-hidden="true"
+        >
+          <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+      </div>
+    </div>
+
+    
+    <header>
+      <div
+        class="header-area homepage1 header header-sticky d-none d-lg-block"
+        id="header"
+        style="background-color: white"
+      >
+        <div class="container">
+          <div class="header-elements">
+            <div class="site-logo">
+              <a href="index.html"
+                ><img src="assets/img/logo/logo1.png" alt="SIA SATIS"
+              /></a>
+            </div>
+            <nav class="main-menu" aria-label="Galvenā navigācija">
+              <ul>
+                <li><a href="index.html">Sākums</a></li>
+                <li><a href="about.html">Par mums</a></li>
+                <li><a href="catalog.html">Produkcija</a></li>
+                <li><a href="tech.html">Tehnoloģijas</a></li>
+                <li><a href="#Kontakti">Kontakti</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    
+    <div class="mobile-header mobile-haeder1 d-block d-lg-none">
+      <div class="container-fluid">
+        <div class="col-12">
+          <div class="mobile-header-elements">
+            <div class="mobile-logo">
+              <a href="index.html"
+                ><img src="assets/img/logo/logo1.png" alt="SIA SATIS"
+              /></a>
+            </div>
+            <div
+              class="mobile-nav-icon dots-menu"
+              role="button"
+              tabindex="0"
+              aria-label="Atvērt izvēlni"
+            >
+              <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-sidebar mobile-sidebar1">
+      <div class="logosicon-area">
+        <div class="logos">
+          <img src="assets/img/logo/logo1.png" alt="SIA SATIS" />
+        </div>
+        <div
+          class="menu-close"
+          role="button"
+          tabindex="0"
+          aria-label="Aizvērt izvēlni"
+        >
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="mobile-nav">
+        <ul class="mobile-nav-list">
+          <li><a href="index.html">Sākums</a></li>
+          <li><a href="about.html">Par mums</a></li>
+          <li><a href="catalog.html">Produkcija</a></li>
+          <li><a href="tech.html">Tehnoloģijas</a></li>
+          <li><a href="#Kontakti">Kontakti</a></li>
+        </ul>
+        <div class="allmobilesection">
+          <div class="single-footer" style="margin-top: 8px">
+            <h3>Kontakti</h3>
+            <div class="footer1-contact-info">
+              <div class="contact-info-single">
+                <div class="contact-info-icon">
+                  <i class="fa-solid fa-phone-volume"></i>
+                </div>
+                <div class="contact-info-text">
+                  <a href="tel:+37167995788">+371 67995788</a><br /><a
+                    href="tel:+37127763220"
+                    >+371 27763220</a
+                  >
+                </div>
+              </div>
+              <div class="contact-info-single">
+                <div class="contact-info-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="contact-info-text">
+                  <a href="mailto:info@satis.lv">info@satis.lv</a>
+                </div>
+              </div>
+              <div class="single-footer">
+                <h3>Mūsu atrašanās vieta</h3>
+                <div class="contact-info-single">
+                  <div class="contact-info-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <div class="contact-info-text">
+                    Gaujas iela 24/21, Vangaži, Ropažu novads, LV-2136, Latvija
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <section class="satis-hero">
+      <div class="container">
+        <h1>Stiprs pamats<br />Jūsu projektiem</h1>
+        <p>
+          Ražojam kvalitatīvas dzelzsbetona konstrukcijas, kas nodrošina
+          izturību, precizitāti un ilgmūžību. No standarta risinājumiem līdz
+          individuāliem pasūtījumiem — uzticams partneris Jūsu būvniecības
+          projektiem.
+        </p>
+        <a class="satis-button" href="catalog.html">Produkcijas katalogs</a>
+      </div>
+    </section>
+
+    
+    <section class="satis-about" aria-labelledby="about-heading">
+      <div class="satis-about-container">
+        <div class="satis-about__copy">
+          <div class="satis-about__intro">
+            <h2 id="about-heading">Mūsu priekšrocības</h2>
+            <p>
+              Apvienojam pārdomātu plānošanu, kvalitatīvus risinājumus un
+              individuālu pieeju katram projektam.
+            </p>
+          </div>
+          <div class="satis-benefits">
+            <article class="satis-benefit">
+              <span class="satis-benefit__number">01</span>
+              <div>
+                <h3>Pieredze, Uz Kuru Var Paļauties</h3>
+                <p>
+                  Ar vairāk nekā 30 gadu pieredzi dzelzsbetona izstrādājumu
+                  ražošanā mēs piedāvājam pārbaudītus un uzticamus risinājumus
+                  dažādiem būvniecības projektiem. Mūsu zināšanas un
+                  profesionālā pieeja palīdz nodrošināt kvalitāti katrā
+                  ražošanas posmā.
+                </p>
+              </div>
+            </article>
+            <article class="satis-benefit">
+              <span class="satis-benefit__number">02</span>
+              <div>
+                <h3>Kvalitāte Katrā Izstrādājumā</h3>
+                <p>
+                  Mēs pievēršam uzmanību katrai detaļai — no materiālu izvēles
+                  līdz gatavam izstrādājumam. Ražošanas procesā ievērojam
+                  tehniskās prasības, lai nodrošinātu dzelzsbetona konstrukciju
+                  izturību, precizitāti un ilgmūžību.
+                </p>
+              </div>
+            </article>
+            <article class="satis-benefit">
+              <span class="satis-benefit__number">03</span>
+              <div>
+                <h3>Individuāli Risinājumi Jūsu Projektiem</h3>
+                <p>
+                  Katrs būvniecības projekts ir unikāls, tāpēc piedāvājam gan
+                  standarta dzelzsbetona izstrādājumus, gan individuāli
+                  izgatavotas konstrukcijas atbilstoši klienta vajadzībām un
+                  tehniskajai dokumentācijai.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <figure class="satis-about__photo">
+          <img
+            src="assets/img/bg/header-bg2.jpg"
+            alt="Mūsdienīga māja"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+    </section>
+    
+
+    
+    <section
+      class="contact1-section-area sp6"
+      style="background-color: #fff"
+      id="Kontakti"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 m-auto">
+            <div class="contact-header-area text-center heading2">
+              <h2>Sazinieties ar mums</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-5" data-aos="zoom-out" data-aos-duration="1000">
+            <div class="contact-info-area satis-contact-note">
+              <h3>Kontaktinformācija</h3>
+              <p>
+                Vai jums ir jautājumi par mūsu produkciju vai nepieciešams
+                individuāls piedāvājums? Sazinieties ar mums — palīdzēsim atrast
+                piemērotāko risinājumu jūsu projektam.
+              </p>
+              <hr
+                style="border: 0; border-top: 1px solid #e6e6e6; margin: 28px 0"
+              />
+              <div class="contact-auhtor-box">
+                <div class="icons">
+                  <img src="assets/img/icons/location2.svg" alt="" />
+                </div>
+                <div class="content">
+                  <h4>Mūsu atrašanās vieta</h4>
+                  <p>
+                    Gaujas iela 24/21, Vangaži, Ropažu novads, LV-2136, Latvija
+                  </p>
+                </div>
+              </div>
+              <div class="space40"></div>
+              <div class="contact-auhtor-box">
+                <div class="icons">
+                  <img src="assets/img/icons/phone2.svg" alt="" />
+                </div>
+                <div class="content">
+                  <h4>Tālruņa numurs</h4>
+                  <a href="tel:+37167995788">+371 67995788</a><br /><a
+                    href="tel:+37127763220"
+                    >+371 27763220</a
+                  >
+                </div>
+              </div>
+              <div class="space40"></div>
+              <div class="contact-auhtor-box">
+                <div class="icons">
+                  <img src="assets/img/icons/email2.svg" alt="" />
+                </div>
+                <div class="content">
+                  <h4>E-pasta adrese</h4>
+                  <a href="mailto:info@satis.lv">info@satis.lv</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7" data-aos="zoom-out" data-aos-duration="1200">
+            <div class="contact-boxarea">
+              <h3>Pieprasīt piedāvājumu</h3>
+              <p>
+                Aprakstiet nepieciešamos izstrādājumus vai atstājiet savu
+                jautājumu — mēs sazināsimies ar jums.
+              </p>
+              
+              <form
+                class="satis-contact-form"
+                action="https://api.web3forms.com/submit"
+                method="POST"
+              >
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value="YOUR_WEB3FORMS_ACCESS_KEY"
+                />
+                <input
+                  type="hidden"
+                  name="subject"
+                  value="Jauns pieprasījums no SATIS mājaslapas"
+                />
+                <input
+                  type="checkbox"
+                  name="botcheck"
+                  style="display: none"
+                  tabindex="-1"
+                  autocomplete="off"
+                  aria-hidden="true"
+                />
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="input-area">
+                      <input
+                        type="text"
+                        name="first_name"
+                        placeholder="Vārds"
+                        aria-label="Vārds"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="input-area">
+                      <input
+                        type="text"
+                        name="last_name"
+                        placeholder="Uzvārds"
+                        aria-label="Uzvārds"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="input-area">
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="E-pasta adrese"
+                        aria-label="E-pasta adrese"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="input-area">
+                      <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Tālruņa numurs"
+                        aria-label="Tālruņa numurs"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="input-area">
+                      <textarea
+                        name="message"
+                        placeholder="Jūsu ziņojums"
+                        aria-label="Jūsu ziņojums"
+                        required
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="input-area">
+                      <button type="submit" class="header-btn1">
+                        Nosūtīt pieprasījumu
+                        <span
+                          ><i
+                            class="fa-solid fa-arrow-right"
+                            aria-hidden="true"
+                          ></i
+                        ></span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <footer class="footer1-section-area" style="background-color: #fff">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-logo-area">
+              <img src="assets/img/logo/logo1.png" alt="SIA SATIS" />
+              <p>
+                Izturība, precizitāte un kvalitāte ir mūsu darba pamatā. Ražojam
+                dzelzsbetona konstrukcijas, kas palīdz īstenot dažāda mēroga
+                būvniecības projektus, nodrošinot uzticamus risinājumus šodienai
+                un nākotnei.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-logo-area1">
+              <h3>Saites</h3>
+              <ul>
+                <li><a href="index.html">Sākums</a></li>
+                <li><a href="about.html">Par mums</a></li>
+                <li><a href="catalog.html">Produkcija</a></li>
+                <li><a href="tech.html">Tehnoloģijas</a></li>
+                <li><a href="#Kontakti">Kontakti</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-logo-area2">
+              <h3>Sazinieties ar mums</h3>
+              <ul>
+                <li><span>SIA SATIS, reģ. Nr. 40003108492</span></li>
+                <li>
+                  <a href="https://www.satis.lv/"><span>www.satis.lv</span></a>
+                </li>
+                <li>
+                  <a href="mailto:info@satis.lv"
+                    ><img src="assets/img/icons/email.svg" alt="" /><span
+                      >info@satis.lv</span
+                    ></a
+                  >
+                </li>
+                <li>
+                  <span
+                    >Gaujas iela 24/21, Vangaži, Ropažu novads, LV-2136,
+                    Latvija</span
+                  >
+                </li>
+                <li>
+                  <a href="tel:+37167995788"
+                    ><img src="assets/img/icons/phone.svg" alt="" /><span
+                      >+371 67995788</span
+                    ></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="space80 d-lg-block d-none"></div>
+        <div class="space40 d-lg-none d-block"></div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div
+              class="copyright-area d-flex justify-content-between flex-wrap align-items-center"
+            >
+              <div class="pera">
+                <p>© 2026 SIA SATIS. Visas tiesības aizsargātas.</p>
+              </div>
+              <ul class="d-flex gap-3 m-0">
+                <li><a href="cookies.html">Sīkdatņu politika</a></li>
+                <li><a href="policies.html">Privātuma politika</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    
+    <script src="assets/js/plugins/bootstrap.min.js"></script>
+    <script src="assets/js/plugins/fontawesome.js"></script>
+    <script src="assets/js/plugins/aos.js"></script>
+    <script src="assets/js/plugins/counter.js"></script>
+    <script src="assets/js/plugins/gsap.min.js"></script>
+    <script src="assets/js/plugins/ScrollTrigger.min.js"></script>
+    <script src="assets/js/plugins/Splitetext.js"></script>
+    <script src="assets/js/plugins/sidebar.js"></script>
+    <script src="assets/js/plugins/magnific-popup.js"></script>
+    <script src="assets/js/plugins/mobilemenu.js"></script>
+    <script src="assets/js/plugins/owlcarousel.min.js"></script>
+    <script src="assets/js/plugins/gsap-animation.js"></script>
+    <script src="assets/js/plugins/nice-select.js"></script>
+    <script src="assets/js/plugins/waypoints.js"></script>
+    <script src="assets/js/plugins/slick-slider.js"></script>
+    <script src="assets/js/plugins/circle-progress.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
